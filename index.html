@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Self Learn | Website</title>
+    <link
+      rel="icon"
+      href="/Users/karthik/Documents/HTML-MCS/images/selflearn-icon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+      }
+      html,
+      body {
+        font-family: helvetica, arial;
+        height: 100%;
+        width: 100%;
+      }
+      h1 {
+        font-size: 35px;
+        color: rgb(99, 99, 99);
+        line-height: 2rem;
+      }
+      h2 {
+        color: rgb(99, 99, 99);
+        line-height: 2rem;
+      }
+      h3 {
+        color: rgb(99, 99, 99);
+        line-height: 2rem;
+      }
+      h4 {
+        font-size: 25px;
+        color: rgb(99, 99, 99);
+        font-weight: 500;
+        line-height: 2rem;
+      }
+      h5 {
+        color: rgb(99, 99, 99);
+        line-height: 2rem;
+      }
+      h6 {
+        color: rgb(99, 99, 99);
+        line-height: 2rem;
+      }
+      p {
+        font-size: 20px;
+        color: rgb(109, 109, 109);
+        line-height: 2.3rem;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        background-color: #ffffff;
+        padding: 10px;
+        margin-top: 15px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        font-size: 10px;
+        box-shadow: rgb(0 0 0 / 8%) 0px 5px 29px 3px;
+        margin: 10px;
+      }
+
+      .grid-container > div:hover {
+        box-shadow: rgb(0 0 0 / 10%) 0px 5px 29px 3px;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .grid-containe_up {
+        background-color: #64977a;
+        padding: 20px;
+      }
+
+      .grid-containe_up span {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+
+      .grid-containe_down {
+        padding: 20px;
+      }
+
+      .background-image {
+        background-image: url("images/back-img.png");
+        background-color: #cccccc;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .custom_container {
+        max-width: 1370px;
+        margin: 0 auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: white;
+        padding-top: 60px;
+        margin-top: 100px;
+        background-color: #63977a;
+        height: auto;
+        width: 100%;
+        /* box-shadow: rgb(0 0 0 / 6%) 0px 5px 29px 3px; */
+      }
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-content h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      .footer-content p {
+        max-width: 800px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #ffffff;
+      }
+      .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+        margin-bottom: 60px;
+      }
+      .socials li {
+        margin: 0 10px;
+      }
+      .socials a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+      }
+      .socials a i {
+        font-size: 1.7rem;
+        transition: color 0.5s ease;
+      }
+      .socials a:hover i {
+        color: #555555;
+      }
+
+      /* .socials a:hover .fa-facebook-square {
+        color: #1877f2;
+      }
+
+      .socials a:hover .fa-google-plus {
+        color: #db4437;
+      }
+
+      .socials a:hover .fa-twitter {
+        color: #1da1f2;
+      }
+
+      .socials a:hover .fa-apple {
+        color: #000000;
+      }
+
+      .socials a:hover .fa-linkedin-square {
+        color: #0a66c2;
+      }
+
+      .socials a:hover .fa-youtube-play {
+        color: #ff0000;
+      } */
+      .footer-bottom {
+        background-color: #2d543f;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .footer-bottom p {
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      .footer-bottom span {
+        text-transform: capitalize;
+        opacity: 0.5;
+        font-weight: 400;
+        font-size: 0.8rem;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid rgb(156, 156, 156);
+        border-collapse: collapse;
+        font-size: 0.8rem;
+        color: rgb(116, 116, 116);
+      }
+      dl,
+      dt {
+        font-size: 1rem;
+        color: rgb(116, 116, 116);
+      }
+      hr.gray {
+        border-top: 1px solid rgb(243, 243, 243);
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="custom_container">
+      <div style="text-align: center; margin-top: 65px">
+        <img
+          width="70px"
+          height="70px"
+          src="images/selflearn-icon.png"
+          alt="logo"
+        />
+      </div>
+
+      <h1 style="text-align: center; margin-top: 30px">Self Learn Website</h1>
+
+      <p
+        style="
+          text-align: center;
+          max-width: 900px;
+          margin: 10px auto;
+          margin-top: 30px;
+          margin-bottom: 70px;
+        "
+      >
+        Glad to <b>Welcome</b> you to our self learning website, We created this
+        website using HTML elementary education and my congratulations to you
+        for creating a similar website, Thank you
+      </p>
+
+      <!-- <h4 style="text-align: center; margin-top: 10px">Section - 01</h4> -->
+
+      <div class="grid-container">
+        <div>
+          <div class="grid-containe_up">
+            <span> 01 - HTML headings </span>
+          </div>
+          <div class="grid-containe_down">
+            <h1 style="font-size: 22px; margin-bottom: 10px">
+              h1 - Hello World!
+            </h1>
+            <h2 style="font-size: 20px; margin-bottom: 10px">
+              h2 - Hello World!
+            </h2>
+            <h3 style="font-size: 18px; margin-bottom: 10px">
+              h3 - Hello World!
+            </h3>
+            <h4 style="font-size: 16px; margin-bottom: 10px">
+              h4 - Hello World!
+            </h4>
+            <h5 style="font-size: 14px; margin-bottom: 10px">
+              h5 - Hello World!
+            </h5>
+            <h6 style="font-size: 12px; margin-bottom: 10px">
+              h6 - Hello World!
+            </h6>
+          </div>
+        </div>
+        <div>
+          <div class="grid-containe_up">
+            <span> 02 - Paragraphs & Image </span>
+          </div>
+          <div class="grid-containe_down">
+            <p>
+              p - Let's protect nature, let's grow plants, let's help greenery
+              in the country and at home, Thank you
+            </p>
+            <div style="text-align: center">
+              <img
+                width="200px"
+                height="200px"
+                src="images/leaf.png"
+                alt="logo"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="grid-containe_up">
+            <span> 03 - HTML Text Formatting </span>
+          </div>
+          <div class="grid-containe_down">
+            <p style="font-size: 18px">b - <b>Hello World!</b></p>
+            <p style="font-size: 18px">
+              strong - <strong>Hello World!</strong>
+            </p>
+            <p style="font-size: 18px">i - <i>Hello World!</i></p>
+            <p style="font-size: 18px">em - <em>Hello World!</em></p>
+            <p style="font-size: 18px">mark - <mark>Hello World!</mark></p>
+            <p style="font-size: 18px">small - <small>Hello World!</small></p>
+          </div>
+        </div>
+        <div>
+          <div class="grid-containe_up">
+            <span> 04 - HTML Text Formatting </span>
+          </div>
+          <div class="grid-containe_down">
+            <p style="font-size: 18px">del - <del>Hello World!</del></p>
+            <p style="font-size: 18px">ins - <ins>Hello World!</ins></p>
+            <p style="font-size: 18px">sub - Hi!<sub>Hello World!</sub>Down</p>
+            <p style="font-size: 18px">sup - Hi!<sup>Hello World!</sup>UP</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div>
+          <div class="grid-containe_up">
+            <span> 05 - Quotation and Citation </span>
+          </div>
+          <div class="grid-containe_down">
+            <p>blockquote elements.</p>
+
+            <blockquote
+              style="font-size: 13px; color: rgb(61, 61, 61)"
+              cite="http://www.worldwildlife.org/who/index.html"
+            >
+              For nearly 60 years, WWF has been protecting the future of nature.
+              The world's.
+            </blockquote>
+            <hr class="gray" />
+            <p>q element.</p>
+
+            <span style="font-size: 13px; color: rgb(61, 61, 61)">
+              WWF's goal is to:
+              <q style="color: green"
+                >Build a future where people live in harmony with nature.</q
+              >
+            </span>
+            <hr class="gray" />
+            <p>address element</p>
+
+            <address style="font-size: 13px; color: rgb(61, 61, 61)">
+              Written by John Doe.<br />
+              Visit us at:<br />
+              Example.com<br />
+              Box 564, Disneyland<br />
+              USA
+            </address>
+          </div>
+        </div>
+        <div>
+          <div class="grid-containe_up">
+            <span> 06 - Quotation and Citation</span>
+          </div>
+          <div class="grid-containe_down">
+            <p>cite elements</p>
+
+            <span style="font-size: 13px; color: rgb(61, 61, 61)">
+              <cite style="color: red">The Scream</cite> by Edvard Munch.
+              Painted in 1893.The text in the element usually renders in italic.
+            </span>
+            <hr class="gray" />
+            <p>abbr elements</p>
+            <span style="font-size: 13px; color: rgb(61, 61, 61)">
+              The
+              <abbr
+                style="color: rgb(67, 55, 230)"
+                title="World Health Organization"
+                >WHO</abbr
+              >
+              was founded in 1948.
+            </span>
+            <hr class="gray" />
+
+            <p>bi-directional override (bdo)</p>
+
+            <span style="font-size: 13px; color: rgb(61, 61, 61)">
+              <bdo dir="rtl">This line will be written from right to left</bdo>
+              The HTML tag is used to override the current text direction
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div class="grid-containe_up">
+            <span>07 - Comments & Links</span>
+          </div>
+          <div class="grid-containe_down">
+            <p>Comments tag</p>
+            <p>
+              This<span style="color: green; font-size: 12px"
+                >Comments Hide"..<!-- great text -->.."
+              </span>
+              is a paragraph.
+            </p>
+            <hr class="gray" />
+
+            <p>HTML Link</p>
+            <p>
+              <a href="https://www.w3schools.com/" target="_blank">
+                <img alt="W3-School" src="images/w3.png" width="100%" />
+              </a>
+            </p>
+
+            <p style="font-size: 13px; color: rgb(61, 61, 61)">
+              If you want to know more about the website CLIK the Image or Link
+              here<br /><a
+                style="color: green"
+                href="https://www.w3schools.com/"
+                target="_blank"
+              >
+                Visit W3Schools.com!</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="background-image">
+          <div class="grid-containe_up">
+            <span>08 - Background Image, List & Table</span>
+          </div>
+          <div class="grid-containe_down">
+            <div style="margin-bottom: 20px">
+              <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+              </dl>
+            </div>
+            <table style="width: 100%">
+              <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>43</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>57</td>
+              </tr>
+            </table>
+            <div style="margin-top: 20px">
+              <table style="width: 100%">
+                <colgroup>
+                  <col span="3" />
+                  <col span="2" style="background-color: rgb(228, 255, 230)" />
+                </colgroup>
+                <tr>
+                  <th>MON</th>
+                  <th>TUE</th>
+                  <th>WED</th>
+                  <th>THU</th>
+                  <th>FRI</th>
+                  <th>SAT</th>
+                  <th>SUN</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <h3>Welcome to this footer section</h3>
+        <p>
+          Glad to welcome our this <b>Footer section</b>, Thanks for Viewing my
+          website, I have been doing this for three days and follow you social
+          media to visit my pages, Thank you
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fa fa-facebook-square"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.google.com/account/about/" target="_blank"
+              ><i class="fa fa-google-plus"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/?lang=en" target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.apple.com/" target="_blank">
+              <i class="fa fa-apple"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank"
+              ><i class="fa fa-linkedin-square"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://youtu.be/zdA3qZNH1vc" target="_blank"
+              ><i class="fa fa-youtube-play"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright &copy;2021-2025 by Refsnes Data. All Rights
+          <span> Karthi </span>Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
